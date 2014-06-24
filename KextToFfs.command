@@ -39,9 +39,9 @@ function kext2ffs(){
   
     "$binDir"/GenSec -s EFI_SECTION_PE32 -o $b.pe32 $b.bin
     "$binDir"/GenSec -s EFI_SECTION_USER_INTERFACE -n $version -o $b-1.pe32
-    "$binDir"/GenFfs -t EFI_FV_FILETYPE_DRIVER -g DADE100$2-1B31-4FE4-8557-26FCEFC78275 -o "$ffsDir"/Kext/$b.ffs -i $b.pe32 -i $b-1.pe32
+    "$binDir"/GenFfs -t EFI_FV_FILETYPE_FREEFORM -g DADE100$2-1B31-4FE4-8557-26FCEFC78275 -o "$ffsDir"/Kext/$b.ffs -i $b.pe32 -i $b-1.pe32
 	"$binDir"/GenSec -s EFI_SECTION_COMPRESSION -o $b-2.pe32 $b.pe32 $b-1.pe32
-    "$binDir"/GenFfs -t EFI_FV_FILETYPE_DRIVER -g DADE100$2-1B31-4FE4-8557-26FCEFC78275 -o "$ffsDir"/Kext/Compress/$c.ffs -i $b-2.pe32
+    "$binDir"/GenFfs -t EFI_FV_FILETYPE_FREEFORM -g DADE100$2-1B31-4FE4-8557-26FCEFC78275 -o "$ffsDir"/Kext/Compress/$c.ffs -i $b-2.pe32
 
 	echo -e $Blue $1 "  \t" will be Ffs $2 $Red name in boot.log will be $version
 }
@@ -66,9 +66,9 @@ function ozm2ffs(){
 
     "$binDir"/GenSec -s EFI_SECTION_PE32 -o $b.pe32 "$OzmDir"/$b.plist
     "$binDir"/GenSec -s EFI_SECTION_USER_INTERFACE -n $b -o $b-1.pe32
-    "$binDir"/GenFfs -t EFI_FV_FILETYPE_DRIVER -g 99F2839C-57C3-411E-ABC3-ADE5267D960D -o "$ffsDir"/Ozm/$b.ffs -i $b.pe32 -i $b-1.pe32
+    "$binDir"/GenFfs -t EFI_FV_FILETYPE_FREEFORM -g 99F2839C-57C3-411E-ABC3-ADE5267D960D -o "$ffsDir"/Ozm/$b.ffs -i $b.pe32 -i $b-1.pe32
     "$binDir"/GenSec -s EFI_SECTION_COMPRESSION -o $b-2.pe32 $b.pe32 $b-1.pe32
-    "$binDir"/GenFfs -t EFI_FV_FILETYPE_DRIVER -g 99F2839C-57C3-411E-ABC3-ADE5267D960D -o "$ffsDir"/Ozm/Compress/$c.ffs -i $b-2.pe32
+    "$binDir"/GenFfs -t EFI_FV_FILETYPE_FREEFORM -g 99F2839C-57C3-411E-ABC3-ADE5267D960D -o "$ffsDir"/Ozm/Compress/$c.ffs -i $b-2.pe32
 
     echo -e $Blue $1 "  \t" will be Ffs $2 $Red name in boot.log will be $b
 }
