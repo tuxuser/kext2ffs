@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Version</key>
+	<string>1.0.0</string>
+	<key>Date</key>
+	<integer>0</integer>
+	<key>Defaults:4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
+	<dict>
+		<key>BiosVersion</key>
+		<string>MP31.88Z.006C.B05.0802291410</string>
+		<key>BiosDate</key>
+		<string>02/29/08</string>
+		<key>ProductName</key>
+		<string>MacPro3,1</string>
+		<key>ProductFamily</key>
+		<string>MacPro</string>
+		<key>SystemVersion</key>
+		<string>1.0</string>
+		<key>SystemSerial</key>
+		<string>CK84593EXYL</string>
+		<key>ProductId</key>
+		<string>Mac-F42C88C8</string>
+		<key>BoardVersion</key>
+		<string>Proto1</string>
+		<key>BaseBoardSerial</key>
+		<string>CK84593EXYL</string>
+		<key>Manufacturer</key>
+		<string>Apple Inc.</string>
+		<key>ProcessorSerial</key>
+		<string>CK0020DZE1D</string>
+		<key>SystemSKU</key>
+		<string>System SKU#</string>
+		<key>BaseBoardAssetTag</key>
+		<string>Base Board Asset Tag#</string>
+		<key>ChassisAssetTag</key>
+		<string>Asset Tag#</string>
+	</dict>
+</dict>
+</plist>
